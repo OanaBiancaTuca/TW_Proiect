@@ -13,10 +13,8 @@ import Profile from "./components/profile.component";
 import AddNote from "./components/add-note.component";
 import Note from "./components/note.component";
 import NotesList from "./components/notes-list.component";
-//import BoardUser from "./components/board-user.component";
 
 
-// import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
 
 class App extends Component {
@@ -60,7 +58,7 @@ class App extends Component {
   }
 
   render() {
-    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
+    const { currentUser } = this.state;
 
     return (
       <div>
@@ -78,7 +76,7 @@ class App extends Component {
 
             {currentUser && (
               <li className="nav-item">
-                <Link to={"/user/notes"} className="nav-link">
+                <Link to={"/notes"} className="nav-link">
                   Notes
                 </Link>
     
@@ -87,7 +85,7 @@ class App extends Component {
             )}
                  {currentUser && (
               <li className="nav-item">
-                <Link to={"/user/add"} className="nav-link">
+                <Link to={"/add"} className="nav-link">
                   AddNote
                 </Link>
     
@@ -133,15 +131,15 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path={ "/user/notes"} component={NotesList} />
-            <Route exact path="/user/add" component={AddNote} />
+            <Route exact path={ "/notes"} component={NotesList} />
+            <Route exact path="/add" component={AddNote} />
             <Route path="/notes/:id" component={Note} />
-            {/* <Route path="/user" component={BoardUser} /> */}
+          
             
           </Switch>
         </div>
 
-        { /*<AuthVerify logOut={this.logOut}/> */ }
+      
       </div>
     );
   }

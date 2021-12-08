@@ -135,7 +135,7 @@ export default class Note extends Component {
                 </div>
                 <div className="form-group">
                   <label htmlFor="content">Content</label>
-                  <input
+                  <textarea
                     type="text"
                     className="form-control"
                     id="content"

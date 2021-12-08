@@ -166,7 +166,7 @@ export default class NotesList extends Component {
                 {currentNote.published ? "Published" : "Pending"}
               </div>
 
-              <Link
+              <Link id="linkEdit"
                 to={"/notes/" + currentNote.id}
                 className="badge badge-warning"
               >

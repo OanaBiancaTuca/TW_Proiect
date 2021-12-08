@@ -26,6 +26,8 @@ db.sequelize = sequelize;
 
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
+db.notes = require("./note.model")(sequelize, Sequelize);
+
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",
@@ -37,7 +39,31 @@ db.user.belongsToMany(db.role, {
   foreignKey: "userId",
   otherKey: "roleId"
 });
+// indicam faptul ca un user are mai multe notite
+// db.user.hasMany(db.notes, { as: "notes" });
 
-db.ROLES = ["user", "admin", "moderator"];
+//indica faptul ca  notita apartine doar unui user
+// db.notes.belongsTo(db.user, {
+//   foreignKey: "userId",
+//   as: "user",
+// });
+
+
+
+//indicam ca o notita poate sa fie a mai multor users
+
+db.role.belongsToMany(db.user, {
+  through: "user_notes",
+  foreignKey: "noteId",
+  otherKey: "userId"
+});
+db.user.belongsToMany(db.notes, {
+  through: "user_notes",
+  foreignKey: "userId",
+  otherKey: "noteId"
+});
+
+
+db.ROLES = ["user"];
 
 module.exports = db;

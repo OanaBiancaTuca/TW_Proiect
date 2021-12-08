@@ -8,3 +8,7 @@
     display: inline-block;
     font-size: 16px;
   }
+  #linkEdit{
+    background-color: #00B74A;
+    padding: auto;
+  }
