@@ -172,7 +172,17 @@ export default class NotesList extends Component {
               >
                 Edit
               </Link>
+
+              
+              <Link id="linkEdit"
+                to={"/files"}
+                className="badge badge-warning"
+              >
+                Upload File
+              </Link>
             </div>
+
+            
           ) : (
             <div>
               <br />

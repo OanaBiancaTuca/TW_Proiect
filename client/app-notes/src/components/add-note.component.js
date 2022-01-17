@@ -99,6 +99,7 @@ export default class AddNote extends Component {
           <textarea
             type="textarea"
             className="form-control"
+            data-provide="markdown"
             id="content"
             required
             value={this.state.content}

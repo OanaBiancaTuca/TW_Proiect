@@ -14,6 +14,7 @@ import AddNote from "./components/add-note.component";
 import Note from "./components/note.component";
 import NotesList from "./components/notes-list.component";
 
+import FileUpload from "./components/FileUpload";
 
 import EventBus from "./common/EventBus";
 
@@ -88,8 +89,16 @@ class App extends Component {
                 <Link to={"/add"} className="nav-link">
                   AddNote
                 </Link>
-    
-              </li>
+                </li>
+                
+                )}
+                {currentUser && (
+           
+               <li className="nav-item">
+               <Link to={"/files"} className="nav-link">
+               File Upload
+                     </Link>
+                </li>
               
             )}
           </div>
@@ -121,9 +130,15 @@ class App extends Component {
                   Sign Up
                 </Link>
               </li>
-            </div>
+            
+           </div>
+
           )}
         </nav>
+
+       
+
+
 
         <div className="container mt-3">
           <Switch>
@@ -134,6 +149,7 @@ class App extends Component {
             <Route exact path={ "/notes"} component={NotesList} />
             <Route exact path="/add" component={AddNote} />
             <Route path="/notes/:id" component={Note} />
+            <Route path="/files" component={FileUpload} />
           
             
           </Switch>
