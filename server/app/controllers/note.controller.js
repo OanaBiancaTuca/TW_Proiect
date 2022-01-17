@@ -37,23 +37,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all notes from the database.
-// exports.findAll = (req, res) => {
-//   //const title = req.query.title;
-//   //const userId=req.query.title; //incerc eu
-//   //var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
-//   //var condition = userId ? { userId: { [Op.like]: `%${userId}%` } } : null; //incerc eu
-//   Note.findAll({ where:{userId:11} })
-//     .then(data => {
-//       res.send(data);
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while retrieving notes."
-//       });
-//     });
-// };
+
 exports.findAll = (req, res) => {
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;

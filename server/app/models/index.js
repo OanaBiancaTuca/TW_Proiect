@@ -39,18 +39,6 @@ db.user.belongsToMany(db.role, {
   foreignKey: "userId",
   otherKey: "roleId"
 });
-// indicam faptul ca un user are mai multe notite
-// db.user.hasMany(db.notes, { as: "notes" });
-
-//indica faptul ca  notita apartine doar unui user
-// db.notes.belongsTo(db.user, {
-//   foreignKey: "userId",
-//   as: "user",
-// });
-
-
-
-//indicam ca o notita poate sa fie a mai multor users
 
 db.role.belongsToMany(db.user, {
   through: "user_notes",

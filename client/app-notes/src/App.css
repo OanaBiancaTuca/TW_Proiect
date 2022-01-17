@@ -48,3 +48,14 @@ label {
   color: #000; 
   font-weight: bold;
 }
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+#pauza{
+  width: 900px;
+}

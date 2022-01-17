@@ -15,6 +15,8 @@ import Note from "./components/note.component";
 import NotesList from "./components/notes-list.component";
 
 import FileUpload from "./components/FileUpload";
+import Chat from "./components/Chat";
+import Join from "./components/Join";
 
 import EventBus from "./common/EventBus";
 
@@ -101,6 +103,17 @@ class App extends Component {
                 </li>
               
             )}
+
+
+            <p id="pauza"></p>
+                {currentUser && (
+           <li className="nav-item">
+           <Link to={"/chatJoin"} className="nav-link">
+           Chat
+                 </Link>
+            </li>
+          
+        )}
           </div>
           
 
@@ -150,6 +163,8 @@ class App extends Component {
             <Route exact path="/add" component={AddNote} />
             <Route path="/notes/:id" component={Note} />
             <Route path="/files" component={FileUpload} />
+            <Route path="/chatJoin" component={Join}/>
+            <Route path="/chat" component={Chat}/>
           
             
           </Switch>
