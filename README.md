@@ -27,3 +27,5 @@ lua notițe (de exemplu când urmăresc un video pe youtube, citesc o carte pe
 kindle, particip la o conferință online)
 • Ca student vreau să organizez grupuri de studiu. Voi invita mai mulți colegi pe
 grup voi partaja notițe
+![image](https://user-images.githubusercontent.com/84070869/182347318-0dbef389-69ff-4fe2-b50f-48fddcedc478.png)
+![image](https://user-images.githubusercontent.com/84070869/182347370-b684dbaa-3b49-4e03-b915-1126fc1a52f8.png)
